@@ -1,0 +1,20 @@
+{
+  "trialReport": {
+    "company": "Cape Town Legal Partners",
+    "period": "2026-04-02 to 2026-04-16",
+    "totalThreats": 47,
+    "threatsBlockedByShieldAI": 47,
+    "threatsMissedByCurrentAV": 31,
+    "criticalIncidents": 4,
+    "highIncidents": 12,
+    "estimatedDamageAvoided": "R2.1M",
+    "currentAVName": "McAfee Endpoint Security",
+    "africanSpecificThreats": 29,
+    "topThreats": [
+      {"name": "ABSA Phishing Kit", "count": 8, "severity": "critical"},
+      {"name": "Eskom Ransomware Lure", "count": 5, "severity": "high"},
+      {"name": "FNB Business Spoof", "count": 7, "severity": "high"},
+      {"name": "SARS Refund Scam", "count": 4, "severity": "medium"}
+    ]
+  }
+}

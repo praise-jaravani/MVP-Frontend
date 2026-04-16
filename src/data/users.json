@@ -1,0 +1,18 @@
+[
+  {
+    "id": "u001",
+    "firstName": "Dhiren",
+    "lastName": "Chetty",
+    "email": "dhiren@shieldai.co.za",
+    "username": "dhiren.chetty",
+    "password": "Demo@1234",
+    "company": "ShieldAI Technologies",
+    "role": "IT Manager",
+    "industry": "Technology",
+    "city": "Johannesburg",
+    "endpointCount": "51-200",
+    "plan": "growth",
+    "createdAt": "2026-01-15T08:00:00Z",
+    "avatar": null
+  }
+]
