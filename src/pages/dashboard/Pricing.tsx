@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import AppLayout from '../../components/layout/AppLayout';
 import { Check, Building, Users, Rocket, Mail } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';

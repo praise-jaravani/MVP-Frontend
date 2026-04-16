@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { Eye, EyeOff, Check, X } from 'lucide-react';
 import Button from '../../components/ui/Button';
 import { SignUpData } from './SignUpLayout';
-import { useAuth } from '../../context/AuthContext';
 import { useToast } from '../../context/ToastContext';
 import { signUp } from '../../utils/auth';
 
@@ -65,7 +64,7 @@ export default function Step4_Password({ data, onBack }: Step4Props) {
     setLoading(true);
 
     try {
-      const newUser = signUp({
+      signUp({
         firstName,
         lastName,
         email,

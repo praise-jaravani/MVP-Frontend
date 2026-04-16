@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import { Bell, CheckCircle } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { getInitials } from '../../utils/formatters';
@@ -11,7 +10,7 @@ interface TopbarProps {
 
 export default function Topbar({ title }: TopbarProps) {
   const { user } = useAuth();
-  const [alerts, setAlerts] = useState<Alert[]>(alertsData);
+  const alerts = alertsData as Alert[];
   const unreadCount = alerts.filter(a => !a.read).length;
 
   return (

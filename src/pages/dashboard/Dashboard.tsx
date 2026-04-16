@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import AppLayout from '../../components/layout/AppLayout';
 import MetricCard from '../../components/ui/MetricCard';
 import ThreatFeedItem from '../../components/ui/ThreatFeedItem';
 import ThreatLineChart from '../../components/charts/ThreatLineChart';
 import ThreatDonutChart from '../../components/charts/ThreatDonutChart';
-import { Shield, Activity, AlertTriangle, TrendingUp } from 'lucide-react';
+import { Shield } from 'lucide-react';
 import endpointsData from '../../data/endpoints.json';
 import threatsData from '../../data/threats.json';
 import alertsData from '../../data/alerts.json';
@@ -12,7 +12,7 @@ import threatFeedData from '../../data/threatFeed.json';
 import { Threat, Endpoint, Alert, ThreatFeedItem as ThreatFeedType } from '../../types';
 
 export default function Dashboard() {
-  const [threatFeed, setThreatFeed] = useState<ThreatFeedType[]>(threatFeedData.slice(0, 10));
+  const [threatFeed, setThreatFeed] = useState<ThreatFeedType[]>((threatFeedData as ThreatFeedType[]).slice(0, 10));
   const [currentFeedIndex, setCurrentFeedIndex] = useState(10);
 
   const endpoints = endpointsData as Endpoint[];
@@ -38,7 +38,7 @@ export default function Dashboard() {
   useEffect(() => {
     const interval = setInterval(() => {
       if (currentFeedIndex < threatFeedData.length) {
-        setThreatFeed(prev => [threatFeedData[currentFeedIndex], ...prev.slice(0, 9)]);
+        setThreatFeed(prev => [(threatFeedData as ThreatFeedType[])[currentFeedIndex], ...prev.slice(0, 9)]);
         setCurrentFeedIndex(prev => prev + 1);
       } else {
         setCurrentFeedIndex(0);

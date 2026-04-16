@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import AppLayout from '../../components/layout/AppLayout';
 import Button from '../../components/ui/Button';
 import { User, Lock, Bell, Zap, CreditCard, Users as UsersIcon, Eye, EyeOff, Check, X } from 'lucide-react';
@@ -10,8 +10,6 @@ type Tab = 'profile' | 'security' | 'notifications' | 'integrations' | 'billing'
 
 export default function Settings() {
   const [activeTab, setActiveTab] = useState<Tab>('profile');
-  const { user, updateUser } = useAuth();
-  const { showToast } = useToast();
 
   const tabs = [
     { id: 'profile', label: 'Profile', icon: User },
@@ -404,7 +402,6 @@ function SecurityTab() {
 }
 
 function NotificationsTab() {
-  const { showToast } = useToast();
   const [settings, setSettings] = useState({
     criticalThreats: true,
     weeklySummary: true,

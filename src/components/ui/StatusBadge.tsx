@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { getStatusColor } from '../../utils/formatters';
 
 interface StatusBadgeProps {

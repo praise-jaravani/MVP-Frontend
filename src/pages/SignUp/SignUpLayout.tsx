@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 import { Shield, CheckCircle } from 'lucide-react';
 import StepDots from '../../components/ui/StepDots';

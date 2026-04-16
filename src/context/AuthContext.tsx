@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import type { User } from '../types/index.js';
 import { getCurrentUser, signIn as authSignIn, signOut as authSignOut, updateUser as authUpdateUser } from '../utils/auth';
 

@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Zap, Database, FileCheck, TrendingUp, Users, Building, CheckCircle, Play, ArrowRight, Eye, Lock, Brain, AlertTriangle } from 'lucide-react';
+import { Shield, Zap, Database, Users, Building, CheckCircle, ArrowRight, Eye, Lock, Brain, AlertTriangle } from 'lucide-react';
 
 export default function Landing() {
   const [scrollY, setScrollY] = useState(0);
@@ -84,17 +84,17 @@ export default function Landing() {
           </div>
         </nav>
 
-        {/* Section 1: Hero - "Calm Power" */}
-        <section ref={heroRef} className="min-h-screen flex items-center justify-center px-6 pt-20 pb-32">
+        {/* Section 1: Hero */}
+        <section ref={heroRef} className="min-h-screen flex items-center justify-center px-6 pt-32 pb-32">
           <div
-            className="max-w-5xl mx-auto text-center"
+            className="max-w-6xl mx-auto text-center w-full"
             style={{ transform: `translateY(${parallaxFg}px)` }}
           >
             {/* Hero Text with Staggered Fade */}
-            <h1 className="text-6xl md:text-7xl font-display font-bold text-white mb-6 leading-tight animate-fade-in">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-display font-bold text-white mb-8 leading-[1.05] tracking-tight animate-fade-in">
               Cyber protection built for <span className="text-gradient">South Africa</span>
             </h1>
-            <p className="text-2xl md:text-3xl text-white/80 mb-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <p className="text-2xl md:text-3xl text-white/80 mb-5 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               AI-native endpoint security that stays online.
             </p>
             <p className="text-xl md:text-2xl text-white/50 mb-12 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.4s' }}>
@@ -109,10 +109,12 @@ export default function Landing() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
-              <button className="group px-10 py-5 bg-white/5 backdrop-blur text-white text-lg font-semibold rounded-full border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all flex items-center gap-3">
-                <Play className="w-5 h-5" />
-                Watch Demo
-              </button>
+              <Link to="/signin">
+                <button className="group px-10 py-5 bg-white/5 backdrop-blur text-white text-lg font-semibold rounded-full border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all flex items-center gap-3">
+                  View Dashboard
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
             </div>
 
             {/* Scroll Indicator */}

@@ -1,7 +1,7 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import AppLayout from '../../components/layout/AppLayout';
 import StatusBadge from '../../components/ui/StatusBadge';
-import { Search, Filter, Download, Monitor, X } from 'lucide-react';
+import { Search, Download, Monitor, X } from 'lucide-react';
 import { formatRelativeTime } from '../../utils/formatters';
 import { useToast } from '../../context/ToastContext';
 import endpointsData from '../../data/endpoints.json';

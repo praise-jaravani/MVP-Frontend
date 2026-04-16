@@ -1,7 +1,7 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import AppLayout from '../../components/layout/AppLayout';
-import { FileText, Download, Shield, TrendingUp, AlertTriangle, CheckCircle2 } from 'lucide-react';
+import { FileText, Download, Shield, TrendingUp, AlertTriangle } from 'lucide-react';
 import { useToast } from '../../context/ToastContext';
 import reportsData from '../../data/reports.json';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
@@ -16,11 +16,6 @@ export default function Reports() {
     { metric: 'Ransomware Stopped', mcafee: 0, shieldai: 6 },
   ];
 
-  const topThreatsData = trialReport.topThreats.map(t => ({
-    name: t.name,
-    count: t.count,
-    fill: t.severity === 'critical' ? '#EF4444' : t.severity === 'high' ? '#F59E0B' : '#FBBF24',
-  }));
 
   const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
