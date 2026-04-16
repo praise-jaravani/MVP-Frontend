@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { ShieldAlert, WifiOff, CheckCircle2, AlertTriangle, Network } from 'lucide-react';
 import { Endpoint } from '../../../types';
 
