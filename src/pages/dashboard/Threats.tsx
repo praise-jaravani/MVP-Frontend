@@ -248,32 +248,32 @@ export default function Threats() {
         {/* Threats Table */}
         <div className="bg-navy-700 border border-gray-700/50 rounded-lg overflow-hidden">
           <div className="overflow-x-auto">
-            <table className="w-full">
+            <table className="w-full min-w-max">
               <thead className="bg-navy-600 border-b border-gray-600">
                 <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th className="px-3 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
                     Threat Name
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th className="px-3 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
                     Category
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th className="px-3 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
                     Severity
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th className="px-3 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
                     Source
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th className="px-3 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
                     Target
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th className="px-3 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
                     Action
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <th className="px-3 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
                     Confidence
                   </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
-                    Detected
+                  <th className="px-3 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                    Time
                   </th>
                 </tr>
               </thead>
@@ -285,66 +285,66 @@ export default function Threats() {
                       style={{ animationDelay: `${index * 20}ms` }}
                       onClick={() => setExpandedThreat(expandedThreat === threat.id ? null : threat.id)}
                     >
-                      <td className="px-6 py-4">
-                        <div className="flex items-center gap-2">
-                          <p className="text-sm font-medium text-white max-w-xs truncate">{threat.name}</p>
+                      <td className="px-3 py-3">
+                        <div className="flex items-center gap-1.5">
+                          <p className="text-sm font-medium text-white max-w-[200px] truncate">{threat.name}</p>
                           {threat.africanSignature && (
-                            <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-shield-blue/20 text-shield-blue border border-shield-blue/30">
+                            <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-medium bg-shield-blue/20 text-shield-blue border border-shield-blue/30 flex-shrink-0">
                               SA
                             </span>
                           )}
                           {expandedThreat === threat.id ? (
-                            <ChevronUp className="h-4 w-4 text-gray-400" />
+                            <ChevronUp className="h-4 w-4 text-gray-400 flex-shrink-0" />
                           ) : (
-                            <ChevronDown className="h-4 w-4 text-gray-400" />
+                            <ChevronDown className="h-4 w-4 text-gray-400 flex-shrink-0" />
                           )}
                         </div>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
-                        <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium border ${getCategoryColor(threat.category)}`}>
+                      <td className="px-3 py-3 whitespace-nowrap">
+                        <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${getCategoryColor(threat.category)}`}>
                           {threat.category}
                         </span>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
-                        <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium border ${getSeverityColor(threat.severity)}`}>
+                      <td className="px-3 py-3 whitespace-nowrap">
+                        <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${getSeverityColor(threat.severity)}`}>
                           {threat.severity}
                         </span>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="flex items-center gap-2">
-                          <span className="text-lg">{getCountryFlag(threat.sourceCountry)}</span>
-                          <span className="text-sm text-gray-300 font-mono">{threat.sourceIP}</span>
+                      <td className="px-3 py-3 whitespace-nowrap">
+                        <div className="flex items-center gap-1.5">
+                          <span className="text-base">{getCountryFlag(threat.sourceCountry)}</span>
+                          <span className="text-xs text-gray-300 font-mono">{threat.sourceIP}</span>
                         </div>
                       </td>
-                      <td className="px-6 py-4">
+                      <td className="px-3 py-3">
                         <div>
-                          <p className="text-sm text-white">{threat.targetUser}</p>
-                          <p className="text-xs text-gray-400">
+                          <p className="text-sm text-white truncate max-w-[120px]">{threat.targetUser}</p>
+                          <p className="text-xs text-gray-400 truncate max-w-[120px]">
                             {endpointsData.find((e: any) => e.id === threat.targetEndpoint)?.name}
                           </p>
                         </div>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
+                      <td className="px-3 py-3 whitespace-nowrap">
                         <StatusBadge status={threat.action as any} />
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="flex items-center gap-2">
-                          <div className="w-16 bg-gray-700 rounded-full h-2">
+                      <td className="px-3 py-3 whitespace-nowrap">
+                        <div className="flex items-center gap-1.5">
+                          <div className="w-12 bg-gray-700 rounded-full h-1.5">
                             <div
-                              className="bg-shield-blue h-2 rounded-full"
+                              className="bg-shield-blue h-1.5 rounded-full"
                               style={{ width: `${threat.confidence}%` }}
                             />
                           </div>
-                          <span className="text-sm text-gray-300">{threat.confidence}%</span>
+                          <span className="text-xs text-gray-300">{threat.confidence}%</span>
                         </div>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-400">
+                      <td className="px-3 py-3 whitespace-nowrap text-xs text-gray-400">
                         {formatRelativeTime(threat.detectedAt)}
                       </td>
                     </tr>
                     {expandedThreat === threat.id && (
                       <tr className="bg-navy-600/30">
-                        <td colSpan={8} className="px-6 py-4">
+                        <td colSpan={8} className="px-3 py-4">
                           <div className="max-w-3xl">
                             <h4 className="text-sm font-semibold text-white mb-2">Description</h4>
                             <p className="text-sm text-gray-300 leading-relaxed mb-4">

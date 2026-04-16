@@ -11,10 +11,10 @@
     "currentAVName": "McAfee Endpoint Security",
     "africanSpecificThreats": 29,
     "topThreats": [
-      {"name": "ABSA Phishing Kit", "count": 8, "severity": "critical"},
-      {"name": "Eskom Ransomware Lure", "count": 5, "severity": "high"},
-      {"name": "FNB Business Spoof", "count": 7, "severity": "high"},
-      {"name": "SARS Refund Scam", "count": 4, "severity": "medium"}
+      {"name": "Credential Phishing - Banking Theme", "count": 8, "severity": "critical"},
+      {"name": "Ransomware Dropper - Utility Theme", "count": 5, "severity": "high"},
+      {"name": "Business Email Compromise", "count": 7, "severity": "high"},
+      {"name": "Tax Authority Phishing", "count": 4, "severity": "medium"}
     ]
   }
 }

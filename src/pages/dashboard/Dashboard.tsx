@@ -227,12 +227,17 @@ export default function Dashboard() {
               </h3>
               <p className="text-gray-300 text-sm mb-4">
                 Threat intelligence last updated 4 hours ago from AfricaCERT and CSIRT.ZA — 12 new
-                regional signatures loaded. ShieldAI is protecting against ABSA phishing kits, Eskom
-                ransomware lures, and other SA-specific threats.
+                regional signatures loaded. ShieldAI is protecting against banking-themed phishing,
+                utility company impersonation, tax authority scams, and other SA-specific attack patterns.
               </p>
-              <button className="px-4 py-2 bg-shield-blue hover:bg-shield-electric text-white rounded-lg text-sm font-medium transition-all">
+              <a
+                href="https://www.africacert.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-4 py-2 bg-shield-blue hover:bg-shield-electric text-white rounded-lg text-sm font-medium transition-all"
+              >
                 View Threat Library →
-              </button>
+              </a>
             </div>
           </div>
         </div>

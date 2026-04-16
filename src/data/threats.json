@@ -1,7 +1,7 @@
 [
   {
     "id": "t001",
-    "name": "ABSA Credential Phishing Kit v3",
+    "name": "Credential Phishing Email - Banking Theme",
     "category": "phishing",
     "severity": "critical",
     "sourceIP": "41.21.33.107",
@@ -12,11 +12,11 @@
     "confidence": 97,
     "detectedAt": "2026-04-16T07:45:00Z",
     "africanSignature": true,
-    "description": "Credential harvesting page mimicking ABSA Business Banking login portal. Detected via AfricaCERT signature AF-2026-0341."
+    "description": "Credential harvesting page mimicking South African bank login portal. Detected via AfricaCERT signature AF-2026-0341."
   },
   {
     "id": "t002",
-    "name": "Eskom Outage Ransomware Lure",
+    "name": "Ransomware Dropper - Utility Bill Theme",
     "category": "ransomware",
     "severity": "high",
     "sourceIP": "197.80.12.44",
@@ -27,11 +27,11 @@
     "confidence": 99,
     "detectedAt": "2026-04-16T06:30:00Z",
     "africanSignature": true,
-    "description": "Malicious payload disguised as Eskom load-shedding schedule update. CSIRT.ZA advisory CSZ-2026-119."
+    "description": "Malicious payload disguised as utility company service notification. CSIRT.ZA advisory CSZ-2026-119."
   },
   {
     "id": "t003",
-    "name": "FNB Business Banking Spoof",
+    "name": "Business Banking Credential Phishing",
     "category": "phishing",
     "severity": "high",
     "sourceIP": "102.33.22.88",
@@ -42,11 +42,11 @@
     "confidence": 94,
     "detectedAt": "2026-04-16T05:15:00Z",
     "africanSignature": true,
-    "description": "Spoofed FNB login page targeting business account credentials via email link."
+    "description": "Spoofed banking login page targeting business account credentials via email link."
   },
   {
     "id": "t004",
-    "name": "Generic PowerShell Obfuscation",
+    "name": "Obfuscated PowerShell Script Execution",
     "category": "malware",
     "severity": "medium",
     "sourceIP": "45.33.12.100",
@@ -61,7 +61,7 @@
   },
   {
     "id": "t005",
-    "name": "Standard Bank Payment Fraud",
+    "name": "Invoice Fraud - Payment Notification",
     "category": "phishing",
     "severity": "critical",
     "sourceIP": "196.212.11.55",
@@ -72,11 +72,11 @@
     "confidence": 96,
     "detectedAt": "2026-04-16T04:20:00Z",
     "africanSignature": true,
-    "description": "Fake Standard Bank payment notification with malicious attachment. AF-2026-0398 signature."
+    "description": "Fake payment notification with malicious attachment attempting credential theft. AF-2026-0398 signature."
   },
   {
     "id": "t006",
-    "name": "SARS Tax Refund Scam",
+    "name": "Tax Authority Phishing - Refund Scam",
     "category": "phishing",
     "severity": "high",
     "sourceIP": "41.76.88.22",
@@ -87,11 +87,11 @@
     "confidence": 91,
     "detectedAt": "2026-04-15T18:35:00Z",
     "africanSignature": true,
-    "description": "Phishing email impersonating SARS offering tax refund, requesting personal banking details."
+    "description": "Phishing email impersonating tax authority offering refund, requesting personal banking details."
   },
   {
     "id": "t007",
-    "name": "Capitec Account Verification Phish",
+    "name": "Account Verification Phishing",
     "category": "phishing",
     "severity": "high",
     "sourceIP": "102.67.44.11",
@@ -102,11 +102,11 @@
     "confidence": 93,
     "detectedAt": "2026-04-15T16:12:00Z",
     "africanSignature": true,
-    "description": "Fraudulent Capitec account verification request with credential harvesting form."
+    "description": "Fraudulent account verification request with credential harvesting form."
   },
   {
     "id": "t008",
-    "name": "Nedbank SecureCode Bypass Attempt",
+    "name": "Multi-Factor Authentication Bypass Attempt",
     "category": "phishing",
     "severity": "critical",
     "sourceIP": "197.155.33.77",
@@ -117,7 +117,7 @@
     "confidence": 98,
     "detectedAt": "2026-04-15T14:50:00Z",
     "africanSignature": true,
-    "description": "Sophisticated phishing targeting Nedbank SecureCode authentication. CSZ-2026-124."
+    "description": "Sophisticated phishing targeting 2FA authentication mechanisms. CSZ-2026-124."
   },
   {
     "id": "t009",
@@ -136,7 +136,7 @@
   },
   {
     "id": "t010",
-    "name": "Discovery Health Phishing",
+    "name": "Healthcare Provider Credential Phishing",
     "category": "phishing",
     "severity": "medium",
     "sourceIP": "41.86.99.44",
@@ -147,11 +147,11 @@
     "confidence": 88,
     "detectedAt": "2026-04-15T10:15:00Z",
     "africanSignature": true,
-    "description": "Fake Discovery Health medical aid statement with embedded credential harvester."
+    "description": "Fake medical aid provider statement with embedded credential harvester."
   },
   {
     "id": "t011",
-    "name": "MTN Billing Notification Scam",
+    "name": "Mobile Network Billing Scam",
     "category": "phishing",
     "severity": "medium",
     "sourceIP": "102.88.22.66",
@@ -162,7 +162,7 @@
     "confidence": 85,
     "detectedAt": "2026-04-15T08:40:00Z",
     "africanSignature": true,
-    "description": "Fraudulent MTN billing notification requesting payment via compromised link."
+    "description": "Fraudulent mobile network billing notification requesting payment via compromised link."
   },
   {
     "id": "t012",
@@ -181,7 +181,7 @@
   },
   {
     "id": "t013",
-    "name": "Vodacom Contract Renewal Phish",
+    "name": "Service Provider Contract Renewal Phishing",
     "category": "phishing",
     "severity": "medium",
     "sourceIP": "41.191.88.55",
@@ -192,11 +192,11 @@
     "confidence": 82,
     "detectedAt": "2026-04-14T20:15:00Z",
     "africanSignature": true,
-    "description": "Fake Vodacom contract renewal notice with malicious link to payment portal."
+    "description": "Fake service contract renewal notice with malicious link to payment portal."
   },
   {
     "id": "t014",
-    "name": "Investec Client Portal Spoof",
+    "name": "Financial Services Portal Credential Theft",
     "category": "phishing",
     "severity": "high",
     "sourceIP": "196.43.77.99",
@@ -207,11 +207,11 @@
     "confidence": 94,
     "detectedAt": "2026-04-14T18:00:00Z",
     "africanSignature": true,
-    "description": "High-quality Investec client portal clone targeting executive-level credentials."
+    "description": "High-quality financial portal clone targeting executive-level credentials."
   },
   {
     "id": "t015",
-    "name": "Cobalt Strike Beacon",
+    "name": "Cobalt Strike Command & Control Beacon",
     "category": "malware",
     "severity": "critical",
     "sourceIP": "198.44.166.22",
@@ -226,7 +226,7 @@
   },
   {
     "id": "t016",
-    "name": "Old Mutual Policy Document Malware",
+    "name": "Malicious Document - Insurance Theme",
     "category": "malware",
     "severity": "high",
     "sourceIP": "102.165.22.88",
@@ -237,11 +237,11 @@
     "confidence": 90,
     "detectedAt": "2026-04-14T13:20:00Z",
     "africanSignature": true,
-    "description": "Malicious document disguised as Old Mutual policy update. AF-2026-0412."
+    "description": "Malicious document disguised as insurance policy update. AF-2026-0412."
   },
   {
     "id": "t017",
-    "name": "Takealot Order Confirmation Phish",
+    "name": "E-Commerce Order Confirmation Phishing",
     "category": "phishing",
     "severity": "medium",
     "sourceIP": "41.204.88.33",
@@ -252,11 +252,11 @@
     "confidence": 87,
     "detectedAt": "2026-04-14T11:10:00Z",
     "africanSignature": true,
-    "description": "Fake Takealot order confirmation requesting payment information update."
+    "description": "Fake e-commerce order confirmation requesting payment information update."
   },
   {
     "id": "t018",
-    "name": "Department of Home Affairs Malware",
+    "name": "Government Services Impersonation Malware",
     "category": "malware",
     "severity": "high",
     "sourceIP": "196.22.99.111",
@@ -267,11 +267,11 @@
     "confidence": 92,
     "detectedAt": "2026-04-14T09:35:00Z",
     "africanSignature": true,
-    "description": "Malicious attachment impersonating Department of Home Affairs ID renewal notice."
+    "description": "Malicious attachment impersonating government department service notice."
   },
   {
     "id": "t019",
-    "name": "Ransomware Dropper",
+    "name": "Ryuk Ransomware Dropper",
     "category": "ransomware",
     "severity": "critical",
     "sourceIP": "185.220.102.8",
@@ -286,7 +286,7 @@
   },
   {
     "id": "t020",
-    "name": "Shoprite Money Market Scam",
+    "name": "Financial Services Verification Scam",
     "category": "phishing",
     "severity": "medium",
     "sourceIP": "102.177.44.55",
@@ -297,11 +297,11 @@
     "confidence": 84,
     "detectedAt": "2026-04-13T21:45:00Z",
     "africanSignature": true,
-    "description": "Fraudulent Shoprite Money Market account verification request."
+    "description": "Fraudulent financial account verification request targeting employee credentials."
   },
   {
     "id": "t021",
-    "name": "Telkom Fiber Installation Phish",
+    "name": "Service Installation Payment Scam",
     "category": "phishing",
     "severity": "low",
     "sourceIP": "41.133.88.77",
@@ -312,11 +312,11 @@
     "confidence": 76,
     "detectedAt": "2026-04-13T19:20:00Z",
     "africanSignature": true,
-    "description": "Low-sophistication Telkom fiber installation scam requesting upfront payment."
+    "description": "Low-sophistication service installation scam requesting upfront payment."
   },
   {
     "id": "t022",
-    "name": "Momentum Insurance Renewal Fraud",
+    "name": "Insurance Policy Renewal Fraud",
     "category": "phishing",
     "severity": "high",
     "sourceIP": "196.88.22.44",
@@ -327,11 +327,11 @@
     "confidence": 91,
     "detectedAt": "2026-04-13T17:00:00Z",
     "africanSignature": true,
-    "description": "Fake Momentum insurance renewal notice with payment credential harvester."
+    "description": "Fake insurance renewal notice with payment credential harvester."
   },
   {
     "id": "t023",
-    "name": "BEC CEO Impersonation",
+    "name": "Business Email Compromise - CEO Impersonation",
     "category": "phishing",
     "severity": "critical",
     "sourceIP": "102.44.177.99",
@@ -342,7 +342,7 @@
     "confidence": 95,
     "detectedAt": "2026-04-13T14:30:00Z",
     "africanSignature": true,
-    "description": "Business Email Compromise targeting finance department with CEO impersonation. AF-2026-0455."
+    "description": "Business Email Compromise targeting finance department with executive impersonation. AF-2026-0455."
   },
   {
     "id": "t024",
@@ -361,7 +361,7 @@
   },
   {
     "id": "t025",
-    "name": "Rain Mobile Data Promotion Scam",
+    "name": "Mobile Data Promotion Credential Phishing",
     "category": "phishing",
     "severity": "low",
     "sourceIP": "41.220.99.66",
@@ -372,6 +372,6 @@
     "confidence": 79,
     "detectedAt": "2026-04-13T10:00:00Z",
     "africanSignature": true,
-    "description": "Fake Rain mobile promotion offering free data in exchange for personal information."
+    "description": "Fake mobile network promotion offering free data in exchange for personal information."
   }
 ]

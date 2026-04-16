@@ -46,30 +46,32 @@ export default function ThreatDonutChart({ threats }: ThreatDonutChartProps) {
 
   return (
     <div className="relative">
-      <ResponsiveContainer width="100%" height={300}>
-        <PieChart>
-          <Pie
-            data={chartData}
-            cx="50%"
-            cy="50%"
-            innerRadius={60}
-            outerRadius={100}
-            paddingAngle={2}
-            dataKey="value"
-          >
-            {chartData.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={entry.color} />
-            ))}
-          </Pie>
-          <Tooltip content={<CustomTooltip />} />
-        </PieChart>
-      </ResponsiveContainer>
+      <div className="relative h-[300px]">
+        <ResponsiveContainer width="100%" height={300}>
+          <PieChart>
+            <Pie
+              data={chartData}
+              cx="50%"
+              cy="50%"
+              innerRadius={60}
+              outerRadius={100}
+              paddingAngle={2}
+              dataKey="value"
+            >
+              {chartData.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={entry.color} />
+              ))}
+            </Pie>
+            <Tooltip content={<CustomTooltip />} />
+          </PieChart>
+        </ResponsiveContainer>
 
-      {/* Center Label */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="text-center">
-          <p className="text-3xl font-bold text-white">{total}</p>
-          <p className="text-xs text-gray-400">Total Threats</p>
+        {/* Center Label - Now properly positioned within the chart */}
+        <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center pointer-events-none">
+          <div className="text-center">
+            <p className="text-3xl font-bold text-white">{total}</p>
+            <p className="text-xs text-gray-400">Total Threats</p>
+          </div>
         </div>
       </div>
 

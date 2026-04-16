@@ -3,18 +3,20 @@ import AppLayout from '../../components/layout/AppLayout';
 import StatusBadge from '../../components/ui/StatusBadge';
 import { Search, Download, Monitor, X } from 'lucide-react';
 import { formatRelativeTime } from '../../utils/formatters';
-import { useToast } from '../../context/ToastContext';
 import endpointsData from '../../data/endpoints.json';
 import threatsData from '../../data/threats.json';
 import { Endpoint, Threat } from '../../types';
 import WeeklyBarChart from '../../components/charts/WeeklyBarChart';
+import EndpointActionModal from '../../components/modals/EndpointActionModal';
+
+type EndpointAction = 'scan' | 'update' | 'isolate' | null;
 
 export default function Endpoints() {
   const [searchQuery, setSearchQuery] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
   const [osFilter, setOsFilter] = useState('all');
   const [selectedEndpoint, setSelectedEndpoint] = useState<Endpoint | null>(null);
-  const { showToast } = useToast();
+  const [activeAction, setActiveAction] = useState<{ endpoint: Endpoint; action: EndpointAction }>({ endpoint: null as any, action: null });
 
   const endpoints = endpointsData as Endpoint[];
   const threats = threatsData as Threat[];
@@ -51,7 +53,11 @@ export default function Endpoints() {
   };
 
   const handleExport = () => {
-    showToast('Export feature coming soon in Growth plan', 'info');
+    alert('Export feature coming soon in Growth plan');
+  };
+
+  const handleAction = (endpoint: Endpoint, action: 'scan' | 'update' | 'isolate') => {
+    setActiveAction({ endpoint, action });
   };
 
   return (
@@ -374,19 +380,28 @@ export default function Endpoints() {
               {/* Action Buttons */}
               <div className="space-y-2">
                 <button
-                  onClick={() => showToast('Force update initiated', 'success')}
+                  onClick={() => {
+                    handleAction(selectedEndpoint, 'update');
+                    setSelectedEndpoint(null);
+                  }}
                   className="w-full px-4 py-3 bg-shield-blue hover:bg-shield-electric text-white rounded-lg font-medium transition-all"
                 >
                   Force Agent Update
                 </button>
                 <button
-                  onClick={() => showToast('Endpoint isolated successfully', 'warning')}
+                  onClick={() => {
+                    handleAction(selectedEndpoint, 'isolate');
+                    setSelectedEndpoint(null);
+                  }}
                   className="w-full px-4 py-3 bg-amber-600 hover:bg-amber-700 text-white rounded-lg font-medium transition-all"
                 >
                   Isolate Endpoint
                 </button>
                 <button
-                  onClick={() => showToast('Scan initiated', 'info')}
+                  onClick={() => {
+                    handleAction(selectedEndpoint, 'scan');
+                    setSelectedEndpoint(null);
+                  }}
                   className="w-full px-4 py-3 bg-navy-600 hover:bg-navy-500 border border-gray-600 text-white rounded-lg font-medium transition-all"
                 >
                   Run Full Scan
@@ -395,6 +410,15 @@ export default function Endpoints() {
             </div>
           </div>
         </div>
+      )}
+
+      {/* Action Modal */}
+      {activeAction.action && activeAction.endpoint && (
+        <EndpointActionModal
+          endpoint={activeAction.endpoint}
+          action={activeAction.action}
+          onClose={() => setActiveAction({ endpoint: null as any, action: null })}
+        />
       )}
     </AppLayout>
   );

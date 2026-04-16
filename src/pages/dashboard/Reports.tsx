@@ -140,8 +140,9 @@ export default function Reports() {
                     were SA-specific attacks that global security tools often miss.
                   </p>
                   <p className="text-sm text-gray-400">
-                    These include ABSA phishing kits, FNB spoofs, Eskom ransomware lures, and SARS scams — threats
-                    specifically targeting South African businesses.
+                    These include phishing campaigns using SA bank themes, utility company impersonation,
+                    government services spoofing, and local business scams — attack patterns specifically
+                    targeting South African businesses and their employees.
                   </p>
                 </div>
               </div>
